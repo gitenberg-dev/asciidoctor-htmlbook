@@ -7,7 +7,8 @@ xmlns="http://www.w3.org/1999/xhtml">
 <% toc_levels = (attr? :levels) ? (attr :levels).to_i : (@document.attr :toclevels, 2).to_i %>
   <head>
     <title><%= doctitle %></title>
-    <meta name="<%= doctitle %>" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta name="title" content="<%= doctitle %>"/>
 
     <% if attr? :author %>
       <meta name="author" content="<%= attr :author %>"/>
