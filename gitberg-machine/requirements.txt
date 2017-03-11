@@ -4,6 +4,7 @@ PyYAML==3.11
 SPARQLWrapper==1.6.4
 git+git://github.com/gitenberg-dev/metadata.git@0.1.11
 #gitenberg.metadata==0.1.10
+git+https://github.com/Gluejar/pyepub
 html5lib==0.999999
 isodate==0.5.1
 pymarc==3.0.3

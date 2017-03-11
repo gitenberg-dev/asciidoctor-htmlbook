@@ -17,9 +17,21 @@ xmlns="http://www.w3.org/1999/xhtml">
   </head>
 <body<%= @id && %( id="#{@id}") %> data-type="book">
   <% if @header %><h1><%= @header.title %></h1><% end %>
+  {% if cover %}
+  <figure data-type="cover">
+    <img src="{{ cover }}"/>
+  </figure>
+  {% else %}
+  <% if attr? :cover %>
+  <figure data-type="cover">
+    <img src="<%= attr :cover %>"/>
+  </figure>
+  <% else %>
   <figure data-type="cover">
     <img src="cover.jpg"/>
   </figure>
+  <% end %>
+  {% endif %}
   <section data-type="titlepage">
     <% if @header %><h1><%= @header.title %></h1><% end %>
     <% if attr? :author %><p data-type="author"><%= attr :author %></p><% end %>
