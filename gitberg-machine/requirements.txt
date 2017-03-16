@@ -1,4 +1,4 @@
-Jinja2==2.8
+Jinja2>=2.8
 PyYAML>=3.10
 git+https://github.com/Gluejar/pyepub
 requests>=2.2.0
